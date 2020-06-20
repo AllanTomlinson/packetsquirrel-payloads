@@ -1,0 +1,29 @@
+<h1 id="introducing-the-packet-squirrel">Introducing the Packet Squirrel!</h1>
+<p>from <a href="https://www.youtube.com/watch?v=fYdFNFTSoy4">Hak5 2307</a></p>
+<ul>
+<li>more appealing to white hats; like a LAN tap</li>
+</ul>
+<p>Or a dropbox that you can pivot and MitM</p>
+<h2 id="default-payloads">Default Payloads</h2>
+<ul>
+<li>Default payloads for
+<ol type="1">
+<li>tcpdump and</li>
+<li>DNS spoofing (MitM) and</li>
+<li>OpenVPN (remote access)</li>
+<li>Arming Mode</li>
+</ol></li>
+</ul>
+<p>Low Power so can run off battery “for days”</p>
+<p>Button to allow user interaction.</p>
+<p>USB port is for a flash drive to dump data to.</p>
+<ul>
+<li>Ethernet IN goes to the computer.</li>
+<li>Ethernet OUT goes to the network.</li>
+</ul>
+<p>Press the button when finished capturing, remove the USB, and read the pcap files offline.</p>
+<h2 id="custom-payloads">Custom Payloads</h2>
+<p>If you stick a payload on a flash drive and plug it in, the Squirrel will run that payload on boot.</p>
+<p>Payloads on USB disks should be stored in /payloads/ in corresponding switch1, switch2 and switch3 folders, e.g. /payloads/switch2</p>
+<p>So in the switch2 folder you would have a file called payload.sh (or payload.py, or payload.txt) This file can set the mode (e.g. NETMODE) for the Squirrel, the LEDs and then call any other scripts or read any config files to set things up.</p>
+<p>This is where you would put the payloads; on the USB.</p>
